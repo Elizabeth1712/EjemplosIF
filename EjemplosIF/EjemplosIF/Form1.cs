@@ -29,28 +29,31 @@ namespace EjemplosIF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt16(L1.Text) > Convert.ToInt16(L2.Text) & Convert.ToInt16(L1.Text) > Convert.ToInt16(L3.Text)) 
-            {
-                MessageBox.Show("L1 es mayor");
-            }
-            else if (Convert.ToInt16(L2.Text) > Convert.ToInt16(L1.Text) & Convert.ToInt16(L2.Text) > Convert.ToInt16(L3.Text))
-            {
-                MessageBox.Show("L2 es mayor");
-            }
-            else if (Convert.ToInt16(L3.Text) > Convert.ToInt16(L1.Text) & Convert.ToInt16(L3.Text) > Convert.ToInt16(L2.Text))
-            {
-                MessageBox.Show("L3 es mayor");
-            }
-            else if (Convert.ToInt16(L3.Text) == Convert.ToInt16(L1.Text) &
-                     Convert.ToInt16(L3.Text) == Convert.ToInt16(L2.Text) &
-                     Convert.ToInt16(L2.Text) == Convert.ToInt16(L1.Text))
-            {
-                MessageBox.Show("El triángulo es equilatero");
-            }
-            else
-            {
-                MessageBox.Show("No hay un lado mayor");
-            }
+            //if (Convert.ToInt16(L1.Text) > Convert.ToInt16(L2.Text) & Convert.ToInt16(L1.Text) > Convert.ToInt16(L3.Text))
+            //{
+            //    MessageBox.Show("L1 es mayor");
+            //}
+            //else if (Convert.ToInt16(L2.Text) > Convert.ToInt16(L1.Text) & Convert.ToInt16(L2.Text) > Convert.ToInt16(L3.Text))
+            //{
+            //    MessageBox.Show("L2 es mayor");
+            //}
+            //else if (Convert.ToInt16(L3.Text) > Convert.ToInt16(L1.Text) & Convert.ToInt16(L3.Text) > Convert.ToInt16(L2.Text))
+            //{
+            //    MessageBox.Show("L3 es mayor");
+            //}
+            //else if (Convert.ToInt16(L3.Text) == Convert.ToInt16(L1.Text) &
+            //         Convert.ToInt16(L3.Text) == Convert.ToInt16(L2.Text) &
+            //         Convert.ToInt16(L2.Text) == Convert.ToInt16(L1.Text))
+            //{
+            //    MessageBox.Show("El triángulo es equilatero");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No hay un lado mayor");
+            //    MessageBox.Show((false) ? "Es verdadero" : "Es falso");
+            //}
+
+            MessageBox.Show((Convert.ToInt16(L1.Text)> Convert.ToInt16(L2.Text)&& Convert.ToInt16(L1.Text)> Convert.ToInt16(L3.Text)) ? "L1 es mayor" : (Convert.ToInt16(L2.Text)> Convert.ToInt16(L1.Text)&& Convert.ToInt16(L2.Text)> Convert.ToInt16(L3.Text)) ? "L2 es verdadero": (Convert.ToInt16(L3.Text)> Convert.ToInt16(L1.Text)&& Convert.ToInt16(L3.Text)> Convert.ToInt16(L2.Text)) ?"L3 es mayor": (Convert.ToInt16(L1.Text)== Convert.ToInt16(L2.Text) && Convert.ToInt16(L2.Text)== Convert.ToInt16(L3.Text) && Convert.ToInt16(L1.Text)== Convert.ToInt16(L3.Text)) ?"El triangulo es equilatero":"No se encontró un lado mayor");
         }
 
         private void button2_Click(object sender, EventArgs e)
