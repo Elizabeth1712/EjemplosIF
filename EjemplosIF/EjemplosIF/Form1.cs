@@ -53,7 +53,18 @@ namespace EjemplosIF
             //    MessageBox.Show((false) ? "Es verdadero" : "Es falso");
             //}
 
-            MessageBox.Show((Convert.ToInt16(L1.Text)> Convert.ToInt16(L2.Text)&& Convert.ToInt16(L1.Text)> Convert.ToInt16(L3.Text)) ? "L1 es mayor" : (Convert.ToInt16(L2.Text)> Convert.ToInt16(L1.Text)&& Convert.ToInt16(L2.Text)> Convert.ToInt16(L3.Text)) ? "L2 es verdadero": (Convert.ToInt16(L3.Text)> Convert.ToInt16(L1.Text)&& Convert.ToInt16(L3.Text)> Convert.ToInt16(L2.Text)) ?"L3 es mayor": (Convert.ToInt16(L1.Text)== Convert.ToInt16(L2.Text) && Convert.ToInt16(L2.Text)== Convert.ToInt16(L3.Text) && Convert.ToInt16(L1.Text)== Convert.ToInt16(L3.Text)) ?"El triangulo es equilatero":"No se encontró un lado mayor");
+            //MessageBox.Show((Convert.ToInt16(L1.Text)> Convert.ToInt16(L2.Text)&& Convert.ToInt16(L1.Text)> Convert.ToInt16(L3.Text)) ? "L1 es mayor" : (Convert.ToInt16(L2.Text)> Convert.ToInt16(L1.Text)&& Convert.ToInt16(L2.Text)> Convert.ToInt16(L3.Text)) ? "L2 es verdadero": (Convert.ToInt16(L3.Text)> Convert.ToInt16(L1.Text)&& Convert.ToInt16(L3.Text)> Convert.ToInt16(L2.Text)) ?"L3 es mayor": (Convert.ToInt16(L1.Text)== Convert.ToInt16(L2.Text) && Convert.ToInt16(L2.Text)== Convert.ToInt16(L3.Text) && Convert.ToInt16(L1.Text)== Convert.ToInt16(L3.Text)) ?"El triangulo es equilatero":"No se encontró un lado mayor");
+
+            //declarando mi instancia de la clase con un constructor vacio
+            Triangulo MiTriangulo = new Triangulo();
+
+            //asigno valores a los aributos
+            MiTriangulo.Lado1 = Convert.ToInt16(L1.Text);
+            MiTriangulo.Lado2 = Convert.ToInt16(L2.Text);
+            MiTriangulo.Lado3 = Convert.ToInt16(L3.Text);
+
+            //mando llamar a los métodos
+            MessageBox.Show((MiTriangulo.EsEquilatero()) ? "Es equilatero" : MiTriangulo.Ladomayor());
         }
 
         private void button2_Click(object sender, EventArgs e)
