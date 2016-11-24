@@ -69,6 +69,7 @@ namespace EjemplosIF
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //cerramos ventana windows
             this.Close();
             
         }
